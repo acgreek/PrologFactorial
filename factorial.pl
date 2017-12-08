@@ -1,7 +1,7 @@
 
-factorial(1, X) :- X is 1.
-factorial(0, X) :- X is 1.
-factorial(X, Y) :-
-    Z is X - 1,
-    factorial(Z, W),
-    Y is X * W.
+factorial(1, Return) :- Return is 1.
+factorial(0, Return) :- Return is 1.
+factorial(X, Return) :-
+    Next is X - 1,
+    factorial(Next, AccReturn),
+    Return is X * AccReturn.
